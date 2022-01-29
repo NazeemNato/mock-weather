@@ -1,4 +1,4 @@
-const cities = require("../data/city");
+const cities = require("./data/city");
 
 exports.cityController = (req, res) => {
   try {

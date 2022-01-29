@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { cityController, cityListController } = require("../controllers/city_controller");
+const { cityController, cityListController } = require("./controllers/city_controller");
 /**
  * @swagger
  * /api/city?c=city:

@@ -35,14 +35,14 @@ const swaggerDefinition = {
 };
 const options = {
   swaggerDefinition,
-  apis: ["./src/routes/*.js"],
+  apis: ["./api/*.js"],
 };
 const swaggerSpec = swaggerJSDoc(options);
 // middleware
 app.use(cors());
 app.use(express.json());
 // routes
-readdirSync("./src/routes").map((f) => app.use("/api", require(`./routes/${f}`)));
+readdirSync("./api").map((f) => app.use("/api", require(`./routes/${f}`)));
 app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // routes
 // start server
